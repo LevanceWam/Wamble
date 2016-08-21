@@ -1,4 +1,5 @@
 # Wamble
+[ ![Codeship Status for LevanceWam/Wamble](https://codeship.com/projects/dde253d0-4965-0134-dcef-2675f97d180a/status?branch=master)](https://codeship.com/projects/169526)
 
 # Installing
 
