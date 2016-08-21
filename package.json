@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/util.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter landing"
   },
   "repository": {
     "type": "git",
