@@ -22,7 +22,7 @@ exports.warn = (title, obj) => {
     if (obj === undefined) {
       console.warn(outputTERM);
     } else {
-      console.log(goodoutputTERM);
+      console.warn(goodoutputTERM);
     }
   }
 };
@@ -34,7 +34,7 @@ exports.error = (title, obj) => {
     if (obj === undefined) {
       console.error(outputTERM);
     } else {
-      console.log(goodoutputTERM);
+      console.error(goodoutputTERM);
     }
   }
 };
