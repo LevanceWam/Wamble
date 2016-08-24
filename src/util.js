@@ -1,15 +1,40 @@
-exports.debug = (title, obj) => {
-  // const fs = require('fs');
+const ts = new Date();
+const seperator = '\n------------------------------\n';
+const fs = require('fs');
+require('terminal-colors');
 
-  const ts = new Date();
-  const seperator = '\n------------------------------\n';
-  require('terminal-colors');
-
-  const outputTERM = seperator.lightCyan + title.magenta.underline + ' ' + obj + '\n' + seperator.lightCyan + ' ' + ts;
-
-  // const outputFILE = seperator + title + ' ' + obj + '\n' + seperator + ' ' + ts;
-
+exports.log = (title, obj) => {
+  const goodoutputTERM = seperator.cyan + title.lightCyan.underline + ' ' + obj + '\n' + seperator.cyan + ' ' + ts;
+  const outputTERM = seperator.cyan + title.lightCyan.underline + seperator.cyan + ' ' + ts;
   if (process.env.DEBUG) {
-    console.log(outputTERM);
+    if (obj === undefined) {
+      console.log(outputTERM);
+    } else {
+      console.log(goodoutputTERM);
+    }
+  }
+};
+
+exports.warn = (title, obj) => {
+  const goodoutputTERM = seperator.green + title.lightGreen.underline + ' ' + obj + '\n' + seperator.green + ' ' + ts;
+  const outputTERM = seperator.yellow + title.lightYellow.underline + seperator.yellow + ' ' + ts;
+  if (process.env.DEBUG) {
+    if (obj === undefined) {
+      console.warn(outputTERM);
+    } else {
+      console.warn(goodoutputTERM);
+    }
+  }
+};
+
+exports.error = (title, obj) => {
+  const goodoutputTERM = seperator.green + title.lightGreen.underline + ' ' + obj + '\n' + seperator.green + ' ' + ts;
+  const outputTERM = seperator.red + title.lightRed.underline + seperator.red + ' ' + ts;
+  if (process.env.DEBUG) {
+    if (obj === undefined) {
+      console.error(outputTERM);
+    } else {
+      console.error(goodoutputTERM);
+    }
   }
 };
