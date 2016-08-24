@@ -23,8 +23,6 @@ exports.warn = (title, obj) => {
       console.warn(outputTERM);
     } else {
       console.log(goodoutputTERM);
-      fs.appendFile('logs/logfile.log', title, obj, () => {
-      });
     }
   }
 };
