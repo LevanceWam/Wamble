@@ -2,7 +2,6 @@ const gulp = require('gulp-async-tasks')(require('gulp'));
 const git = require('gulp-git');
 const argv = require('yargs').argv;
 const packageJSON = require('./package.json');
-const gitignore = require('gulp-gitignore');
 const runSequence = require('run-sequence');
 let version = packageJSON.version;
 
@@ -27,9 +26,9 @@ gulp.task('tag', () => {
   minor = version.substring(indicies[0] + 1, indicies[1]);
   major = version.substring(indicies[0], indicies[0] - version.length);
 
-  console.log('version number out of if: ' + major + '.' + minor + '.' + patc$
+  console.log('version number out of if: ' + major + '.' + minor + '.' + patch);
 
-  if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && a$
+  if (argv.major && argv.minor || argv.minor && argv.patch || argv.patch && argv.major) {
     console.log('Please only select, major, minor, or patch');
   } else {
     if (argv.major) {
