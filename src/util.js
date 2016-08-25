@@ -1,6 +1,5 @@
 const ts = new Date();
 const seperator = '\n------------------------------\n';
-const fs = require('fs');
 require('terminal-colors');
 
 exports.log = (title, obj) => {
@@ -37,4 +36,27 @@ exports.error = (title, obj) => {
       console.error(goodoutputTERM);
     }
   }
+};
+
+// Version bumper
+exports.versBumper = (version, tag) => {
+  // Turns the tag to lowercase letters
+  const lowerTag = tag.toLowerCase();
+  // Splitting up the version number
+  const splitNum = version.split('.');
+  // Turns the split version number into numbers
+  splitNum.map(Number);
+  // Checks the tag to figure out which number to increment
+  if (lowerTag === 'major') {
+    splitNum[0]++;
+    splitNum[1] = 0;
+    splitNum[2] = 0;
+  } else if (lowerTag === 'minor') {
+    splitNum[1]++;
+    splitNum[2] = 0;
+  } else if (lowerTag === 'patch') {
+    splitNum[2]++;
+  }
+  // Returns the new version number
+  return splitNum.join('.');
 };
