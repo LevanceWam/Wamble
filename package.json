@@ -1,8 +1,8 @@
 {
   "name": "Wamble",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
-  "main": "src/util.js",
+  "main": "src/test.js",
   "scripts": {
     "test": "mocha --reporter landing"
   },
