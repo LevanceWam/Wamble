@@ -36,22 +36,19 @@ exports.bump = (version, bumpType) => {
 
 
     // If major is selected reset minor and patch, itterate major
-    if (bumpType === 'major') {
-      major++;
-      minor = 0;
-      patch = 0;
+  if (bumpType === 'major') {
+    major++;
+    minor = 0;
+    patch = 0;
       // Else if minor is selected itterate minor
-    } else if (bumpType === 'minor') {
-      minor++;
-      patch = 0;
-      // Else if patch is seleceted itterate patch
-    } else if (bumpType === 'patch') {
-      patch++;
-    } else {
-      console.log('no update');
-    }
-    version = major + '.' + minor + '.' + patch;
-    console.log('New Version: ' + version);
-
-
+  } else if (bumpType === 'minor') {
+    minor++;
+    patch = 0;
+      // Else if patch is seleceted itterate patch    } else if (bumpType === 'patch') {
+    patch++;
+  } else {
+    console.log('no update');
+  }
+  version = major + '.' + minor + '.' + patch;
+  console.log('New Version: ' + version);
 };
