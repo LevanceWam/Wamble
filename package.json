@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/test.js",
   "scripts": {
+    "start": "node src/util.js",
     "test": "mocha --reporter landing"
   },
   "repository": {
