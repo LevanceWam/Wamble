@@ -6,7 +6,7 @@ describe('Wamble Gamble', () => {
     expect(util.output).to.not.equal(null);
     done();
   });
-  util.bump('1.0.0', 'major');
-  util.bump('1.1.0', 'minor');
-  util.bump('1.0.1', 'patch');
+  util.bump('3.0.0', 'major');
+  util.bump('2.1.0', 'minor');
+  util.bump('2.0.2', 'patch');
 });
